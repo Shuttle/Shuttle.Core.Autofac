@@ -1,16 +1,18 @@
 # Shuttle.Core.AutoFac
 
-# AutoFacComponentContainer
+# AutoFac
 
-The `AutoFacComponentContainer` implements the `IComponentContainer` interface.  
+The implementation for AutoFac makes use of both an `AutoFacComponentRegistry` that implements the `IComponentRegistry` interface as well as an 'AutoFacComponentResolver` that implements the `IComponentResolver` interface.
 
 ~~~c#
 var builder = new ContainerBuilder();
 
-// use builder to register all dependencies
+var registry = new AutoFacComponentRegistry(builder);
 
-var container = new AutoFacComponentContainer(builder.Build());
+// register all components
+
+var resolver = new AutoFacComponentResolver(builder.Build());
 ~~~
 
-AutoFac separates component registration from the resolution side of things.  However, the `IComponentContainer` interface does both.  This leads to a rather odd implementation using the `Update()` method of the builder.  This interface was marked as obsolete at last glance so this `IComponentContainer` implementation may need to be revisted at a later stage.
+
 

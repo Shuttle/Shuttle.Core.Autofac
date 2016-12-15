@@ -47,7 +47,7 @@ namespace Shuttle.Core.AutoFac
             }
         }
 
-        public IEnumerable ResolveAll(Type serviceType)
+        public IEnumerable<object> ResolveAll(Type serviceType)
         {
             Guard.AgainstNull(serviceType, "serviceType");
 

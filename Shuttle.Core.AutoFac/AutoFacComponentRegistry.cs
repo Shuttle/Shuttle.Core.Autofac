@@ -27,13 +27,45 @@ namespace Shuttle.Core.AutoFac
                 {
                     case Lifestyle.Transient:
                         {
-                            _containerBuilder.RegisterType(implementationType).As(serviceType).InstancePerRequest();
+                            _containerBuilder.RegisterType(implementationType).As(serviceType).InstancePerDependency();
 
                             break;
                         }
                     default:
                         {
                             _containerBuilder.RegisterType(implementationType).As(serviceType).SingleInstance();
+
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new TypeRegistrationException(ex.Message, ex);
+            }
+
+            return this;
+        }
+
+        public IComponentRegistry Register(string name, Type serviceType, Type implementationType, Lifestyle lifestyle)
+        {
+            Guard.AgainstNullOrEmptyString(name, "name");
+            Guard.AgainstNull(serviceType, "serviceType");
+            Guard.AgainstNull(implementationType, "implementationType");
+
+            try
+            {
+                switch (lifestyle)
+                {
+                    case Lifestyle.Transient:
+                        {
+                            _containerBuilder.RegisterType(implementationType).As(serviceType).Named(name, serviceType).InstancePerDependency();
+
+                            break;
+                        }
+                    default:
+                        {
+                            _containerBuilder.RegisterType(implementationType).As(serviceType).Named(name, serviceType).SingleInstance();
 
                             break;
                         }

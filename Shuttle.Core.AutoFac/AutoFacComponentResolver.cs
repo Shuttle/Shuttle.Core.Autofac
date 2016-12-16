@@ -32,21 +32,6 @@ namespace Shuttle.Core.AutoFac
             }
         }
 
-        public object Resolve(string name, Type serviceType)
-        {
-            Guard.AgainstNullOrEmptyString(name, "name");
-            Guard.AgainstNull(serviceType, "serviceType");
-
-            try
-            {
-                return _container.ResolveNamed(name, serviceType);
-            }
-            catch (Exception ex)
-            {
-                throw new TypeResolutionException(ex.Message, ex);
-            }
-        }
-
         public IEnumerable<object> ResolveAll(Type serviceType)
         {
             Guard.AgainstNull(serviceType, "serviceType");

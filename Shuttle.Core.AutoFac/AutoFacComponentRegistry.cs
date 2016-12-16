@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Autofac;
 using Autofac.Core.Registration;
 using Shuttle.Core.Infrastructure;
@@ -47,11 +48,10 @@ namespace Shuttle.Core.AutoFac
             return this;
         }
 
-        public IComponentRegistry Register(string name, Type serviceType, Type implementationType, Lifestyle lifestyle)
+        public IComponentRegistry RegisterCollection(Type serviceType, IEnumerable<Type> implementationTypes, Lifestyle lifestyle)
         {
-            Guard.AgainstNullOrEmptyString(name, "name");
             Guard.AgainstNull(serviceType, "serviceType");
-            Guard.AgainstNull(implementationType, "implementationType");
+            Guard.AgainstNull(implementationTypes, "implementationType");
 
             try
             {
@@ -59,13 +59,19 @@ namespace Shuttle.Core.AutoFac
                 {
                     case Lifestyle.Transient:
                         {
-                            _containerBuilder.RegisterType(implementationType).As(serviceType).Named(name, serviceType).InstancePerDependency();
+                            foreach (var type in implementationTypes)
+                            {
+                                _containerBuilder.RegisterType(type).As(serviceType).InstancePerDependency();
+                            }
 
                             break;
                         }
                     default:
                         {
-                            _containerBuilder.RegisterType(implementationType).As(serviceType).Named(name, serviceType).SingleInstance();
+                            foreach (var type in implementationTypes)
+                            {
+                                _containerBuilder.RegisterType(type).As(serviceType).SingleInstance();
+                            }
 
                             break;
                         }

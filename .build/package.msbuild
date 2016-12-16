@@ -1,8 +1,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Deploy" ToolsVersion="4.0">
 	<PropertyGroup>
 		<DeploymentFolder>deployment</DeploymentFolder>
-		<PackageAssembly>Shuttle.Core.AutoFac</PackageAssembly>
-		<PackageName>Shuttle.Core.AutoFac</PackageName>
+		<PackageAssembly>Shuttle.Core.Autofac</PackageAssembly>
+		<PackageName>Shuttle.Core.Autofac</PackageName>
 	</PropertyGroup>
 
 	<Import Project="Shuttle.Core.MSBuild.targets" />

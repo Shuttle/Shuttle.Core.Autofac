@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package >
 	<metadata>
-		<id>Shuttle.Core.AutoFac</id>
+		<id>Shuttle.Core.Autofac</id>
 		<version>{semver}</version>
 		<authors>Eben Roux</authors>
 		<owners>Eben Roux</owners>
-		<licenseUrl>https://github.com/shuttle/Shuttle.Core.AutoFac/raw/master/LICENSE</licenseUrl>
-		<projectUrl>https://github.com/shuttle/Shuttle.Core.AutoFac</projectUrl>
-		<iconUrl>https://raw.githubusercontent.com/Shuttle/Shuttle.Core.AutoFac/master/.media/logo.png</iconUrl>
+		<licenseUrl>https://github.com/shuttle/Shuttle.Core.Autofac/raw/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/shuttle/Shuttle.Core.Autofac</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/Shuttle/Shuttle.Core.Autofac/master/.media/logo.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>AutoFac implementation of the Shuttle.Core.Infrastructure dependency injection interfaces.</description>
+		<description>Autofac implementation of the Shuttle.Core.Infrastructure dependency injection interfaces.</description>
 		<releaseNotes/>
 		<copyright>Copyright (c) {year}, Eben Roux</copyright>
-    <tags>Shuttle.Core AutoFac</tags>
+    <tags>Shuttle.Core Autofac</tags>
     <dependencies>
       <dependency id="Shuttle.Core.Infrastructure" version="{Shuttle.Core.Infrastructure-version}" />
       <dependency id="Autofac" version="{Autofac-version}" />

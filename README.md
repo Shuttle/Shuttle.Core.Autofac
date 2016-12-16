@@ -1,17 +1,17 @@
-# Shuttle.Core.AutoFac
+# Shuttle.Core.Autofac
 
-# AutoFac
+# 
 
-The implementation for AutoFac makes use of both an `AutoFacComponentRegistry` that implements the `IComponentRegistry` interface as well as an 'AutoFacComponentResolver` that implements the `IComponentResolver` interface.
+The implementation for Autofac makes use of both an `ComponentRegistry` that implements the `IComponentRegistry` interface as well as an 'ComponentResolver` that implements the `IComponentResolver` interface.
 
 ~~~c#
 var builder = new ContainerBuilder();
 
-var registry = new AutoFacComponentRegistry(builder);
+var registry = new AutofacComponentRegistry(builder);
 
 // register all components
 
-var resolver = new AutoFacComponentResolver(builder.Build());
+var resolver = new AutofacComponentResolver(builder.Build());
 ~~~
 
 

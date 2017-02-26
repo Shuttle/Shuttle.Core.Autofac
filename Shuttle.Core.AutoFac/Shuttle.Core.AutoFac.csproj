@@ -7,8 +7,8 @@
     <ProjectGuid>{2DD7EC1B-BF12-46A4-AFB0-57913B6E762F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Shuttle.Core.AutoFac</RootNamespace>
-    <AssemblyName>Shuttle.Core.AutoFac</AssemblyName>
+    <RootNamespace>Shuttle.Core.Autofac</RootNamespace>
+    <AssemblyName>Shuttle.Core.Autofac</AssemblyName>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -64,8 +64,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoFacComponentRegistry.cs" />
-    <Compile Include="AutoFacComponentResolver.cs" />
+    <Compile Include="AutofacComponentRegistry.cs" />
+    <Compile Include="AutofacComponentResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

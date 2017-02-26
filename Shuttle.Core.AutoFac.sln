@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shuttle.Core.AutoFac", "Shuttle.Core.AutoFac\Shuttle.Core.AutoFac.csproj", "{2DD7EC1B-BF12-46A4-AFB0-57913B6E762F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shuttle.Core.Autofac", "Shuttle.Core.Autofac\Shuttle.Core.Autofac.csproj", "{2DD7EC1B-BF12-46A4-AFB0-57913B6E762F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{FFB24642-C850-480C-8CBD-6BEDDFDE2588}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{FFB246
 		.build\Shuttle.Core.MSBuild.targets = .build\Shuttle.Core.MSBuild.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shuttle.Core.AutoFac.Tests", "Shuttle.Core.AutoFac.Tests\Shuttle.Core.AutoFac.Tests.csproj", "{90B5235F-C59A-4FF3-8426-F9A6AB229877}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shuttle.Core.Autofac.Tests", "Shuttle.Core.Autofac.Tests\Shuttle.Core.Autofac.Tests.csproj", "{90B5235F-C59A-4FF3-8426-F9A6AB229877}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5CA7E6F-62C8-4BA8-839E-D691DA5B6944}"
 	ProjectSection(SolutionItems) = preProject

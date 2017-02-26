@@ -5,13 +5,13 @@ using Autofac;
 using Autofac.Core;
 using Shuttle.Core.Infrastructure;
 
-namespace Shuttle.Core.AutoFac
+namespace Shuttle.Core.Autofac
 {
-    public class AutoFacComponentResolver : IComponentResolver
+    public class AutofacComponentResolver : IComponentResolver
     {
         private readonly IContainer _container = null;
 
-        public AutoFacComponentResolver(IContainer container)
+        public AutofacComponentResolver(IContainer container)
         {
             Guard.AgainstNull(container, "container");
 

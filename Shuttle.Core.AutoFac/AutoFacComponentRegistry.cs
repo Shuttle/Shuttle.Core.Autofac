@@ -4,13 +4,13 @@ using Autofac;
 using Autofac.Core.Registration;
 using Shuttle.Core.Infrastructure;
 
-namespace Shuttle.Core.AutoFac
+namespace Shuttle.Core.Autofac
 {
-    public class AutoFacComponentRegistry : IComponentRegistry
+    public class AutofacComponentRegistry : IComponentRegistry
     {
         private readonly ContainerBuilder _containerBuilder;
 
-        public AutoFacComponentRegistry(ContainerBuilder containerBuilder)
+        public AutofacComponentRegistry(ContainerBuilder containerBuilder)
         {
             Guard.AgainstNull(containerBuilder, "containerBuilder");
 

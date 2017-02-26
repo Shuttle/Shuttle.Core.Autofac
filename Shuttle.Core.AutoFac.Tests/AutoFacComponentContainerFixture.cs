@@ -1,23 +1,23 @@
 ﻿using Autofac;
 using NUnit.Framework;
-using Shuttle.Core.AutoFac;
+using Shuttle.Core.Autofac;
 using Shuttle.Core.ComponentContainer.Tests;
 
 namespace Shuttle.Core.Castle.Tests
 {
     [TestFixture]
-    public class AutoFacComponentContainerFixture : ComponentContainerFixture
+    public class AutofacComponentContainerFixture : ComponentContainerFixture
     {
         [Test]
         public void Should_be_able_resolve_all_instances()
         {
             var containerBuilder = new ContainerBuilder();
 
-            var registry = new AutoFacComponentRegistry(containerBuilder);
+            var registry = new AutofacComponentRegistry(containerBuilder);
 
             RegisterCollection(registry);
 
-            var resolver = new AutoFacComponentResolver(containerBuilder.Build());
+            var resolver = new AutofacComponentResolver(containerBuilder.Build());
 
             ResolveCollection(resolver);
         }
@@ -27,11 +27,11 @@ namespace Shuttle.Core.Castle.Tests
         {
             var containerBuilder = new ContainerBuilder();
 
-            var registry = new AutoFacComponentRegistry(containerBuilder);
+            var registry = new AutofacComponentRegistry(containerBuilder);
 
             RegisterSingleton(registry);
 
-            var resolver = new AutoFacComponentResolver(containerBuilder.Build());
+            var resolver = new AutofacComponentResolver(containerBuilder.Build());
 
             ResolveSingleton(resolver);
         }
@@ -41,11 +41,11 @@ namespace Shuttle.Core.Castle.Tests
         {
             var containerBuilder = new ContainerBuilder();
 
-            var registry = new AutoFacComponentRegistry(containerBuilder);
+            var registry = new AutofacComponentRegistry(containerBuilder);
 
             RegisterTransient(registry);
 
-            var resolver = new AutoFacComponentResolver(containerBuilder.Build());
+            var resolver = new AutofacComponentResolver(containerBuilder.Build());
 
             ResolveTransient(resolver);
         }

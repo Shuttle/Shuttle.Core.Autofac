@@ -7,8 +7,8 @@
     <ProjectGuid>{90B5235F-C59A-4FF3-8426-F9A6AB229877}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Shuttle.Core.AutoFac.Tests</RootNamespace>
-    <AssemblyName>Shuttle.Core.AutoFac.Tests</AssemblyName>
+    <RootNamespace>Shuttle.Core.Autofac.Tests</RootNamespace>
+    <AssemblyName>Shuttle.Core.Autofac.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -52,15 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AutoFacComponentContainerFixture.cs" />
+    <Compile Include="AutofacComponentContainerFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shuttle.Core.AutoFac\Shuttle.Core.AutoFac.csproj">
+    <ProjectReference Include="..\Shuttle.Core.Autofac\Shuttle.Core.Autofac.csproj">
       <Project>{2DD7EC1B-BF12-46A4-AFB0-57913B6E762F}</Project>
-      <Name>Shuttle.Core.AutoFac</Name>
+      <Name>Shuttle.Core.</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

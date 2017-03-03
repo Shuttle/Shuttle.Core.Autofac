@@ -1,11 +1,14 @@
-﻿using Autofac;
+﻿using System;
+using System.Linq.Expressions;
+using Autofac;
 using NUnit.Framework;
 using Shuttle.Core.Autofac;
 using Shuttle.Core.ComponentContainer.Tests;
+using Shuttle.Core.Infrastructure;
 
 namespace Shuttle.Core.Castle.Tests
 {
-    [TestFixture]
+	[TestFixture]
     public class AutofacComponentContainerFixture : ComponentContainerFixture
     {
         [Test]

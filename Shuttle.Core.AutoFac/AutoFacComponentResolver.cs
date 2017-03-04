@@ -18,13 +18,13 @@ namespace Shuttle.Core.Autofac
             _container = container;
         }
 
-        public object Resolve(Type serviceType)
+        public object Resolve(Type dependencyType)
         {
-            Guard.AgainstNull(serviceType, "serviceType");
+            Guard.AgainstNull(dependencyType, "dependencyType");
 
             try
             {
-                return _container.Resolve(serviceType);
+                return _container.Resolve(dependencyType);
             }
             catch (Exception ex)
             {
@@ -32,13 +32,13 @@ namespace Shuttle.Core.Autofac
             }
         }
 
-        public IEnumerable<object> ResolveAll(Type serviceType)
+        public IEnumerable<object> ResolveAll(Type dependencyType)
         {
-            Guard.AgainstNull(serviceType, "serviceType");
+            Guard.AgainstNull(dependencyType, "dependencyType");
 
             try
             {
-                Type enumerableOfType = typeof(IEnumerable<>).MakeGenericType(serviceType);
+                Type enumerableOfType = typeof(IEnumerable<>).MakeGenericType(dependencyType);
                 return (object[])_container.ResolveService(new TypedService(enumerableOfType));
             }
             catch (Exception ex)

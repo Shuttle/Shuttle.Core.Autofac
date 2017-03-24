@@ -23,20 +23,6 @@ namespace Shuttle.Core.Castle.Tests
 		}
 
 		[Test]
-		public void Should_be_able_to_register_and_resolve_a_multiple_singleton()
-		{
-			var containerBuilder = new ContainerBuilder();
-
-			var registry = new AutofacComponentRegistry(containerBuilder);
-
-			RegisterMultipleSingleton(registry);
-
-			var resolver = new AutofacComponentResolver(containerBuilder.Build());
-
-			ResolveMultipleSingleton(resolver);
-		}
-
-		[Test]
 		public void Should_be_able_to_register_and_resolve_a_singleton()
 		{
 			var containerBuilder = new ContainerBuilder();
@@ -51,20 +37,6 @@ namespace Shuttle.Core.Castle.Tests
 		}
 
 		[Test]
-		public void Should_be_able_to_register_and_resolve_multiple_transient_components()
-		{
-			var containerBuilder = new ContainerBuilder();
-
-			var registry = new AutofacComponentRegistry(containerBuilder);
-
-			RegisterMultipleTransient(registry);
-
-			var resolver = new AutofacComponentResolver(containerBuilder.Build());
-
-			ResolveMultipleTransient(resolver);
-		}
-
-		[Test]
 		public void Should_be_able_to_register_and_resolve_transient_components()
 		{
 			var containerBuilder = new ContainerBuilder();
@@ -76,6 +48,34 @@ namespace Shuttle.Core.Castle.Tests
 			var resolver = new AutofacComponentResolver(containerBuilder.Build());
 
 			ResolveTransient(resolver);
+		}
+
+		[Test]
+		public void Should_be_able_to_register_and_resolve_a_multiple_singleton()
+		{
+			var containerBuilder = new ContainerBuilder();
+
+			var registry = new AutofacComponentRegistry(containerBuilder);
+
+			RegisterMultipleSingleton(registry);
+
+			var resolver = new AutofacComponentResolver(containerBuilder.Build());
+
+			ResolveMultipleSingleton(resolver);
+		}
+
+		[Test]
+		public void Should_be_able_to_register_and_resolve_multiple_transient_components()
+		{
+			var containerBuilder = new ContainerBuilder();
+
+			var registry = new AutofacComponentRegistry(containerBuilder);
+
+			RegisterMultipleTransient(registry);
+
+			var resolver = new AutofacComponentResolver(containerBuilder.Build());
+
+			ResolveMultipleTransient(resolver);
 		}
 	}
 }

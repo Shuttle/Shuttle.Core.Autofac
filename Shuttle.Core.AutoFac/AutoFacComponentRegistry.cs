@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Autofac;
-using Shuttle.Core.Infrastructure;
+using Shuttle.Core.Container;
+using Shuttle.Core.Contract;
 
 namespace Shuttle.Core.Autofac
 {
@@ -11,15 +12,15 @@ namespace Shuttle.Core.Autofac
 
 		public AutofacComponentRegistry(ContainerBuilder containerBuilder)
 		{
-			Guard.AgainstNull(containerBuilder, "containerBuilder");
+			Guard.AgainstNull(containerBuilder, nameof(containerBuilder));
 
 			_containerBuilder = containerBuilder;
 		}
 
 		public override IComponentRegistry Register(Type dependencyType, Type implementationType, Lifestyle lifestyle)
 		{
-			Guard.AgainstNull(dependencyType, "dependencyType");
-			Guard.AgainstNull(implementationType, "implementationType");
+			Guard.AgainstNull(dependencyType, nameof(dependencyType));
+			Guard.AgainstNull(implementationType, nameof(implementationType));
 
 			base.Register(dependencyType, implementationType, lifestyle);
 
@@ -52,8 +53,8 @@ namespace Shuttle.Core.Autofac
 		public override IComponentRegistry RegisterCollection(Type dependencyType, IEnumerable<Type> implementationTypes,
 			Lifestyle lifestyle)
 		{
-			Guard.AgainstNull(dependencyType, "dependencyType");
-			Guard.AgainstNull(implementationTypes, "implementationType");
+			Guard.AgainstNull(dependencyType, nameof(dependencyType));
+			Guard.AgainstNull(implementationTypes, nameof(implementationTypes));
 
 			base.RegisterCollection(dependencyType, implementationTypes, lifestyle);
 
@@ -91,8 +92,8 @@ namespace Shuttle.Core.Autofac
 
 		public override IComponentRegistry Register(Type dependencyType, object instance)
 		{
-			Guard.AgainstNull(dependencyType, "dependencyType");
-			Guard.AgainstNull(instance, "instance");
+			Guard.AgainstNull(dependencyType, nameof(dependencyType));
+			Guard.AgainstNull(instance, nameof(instance));
 
 			base.Register(dependencyType, instance);
 

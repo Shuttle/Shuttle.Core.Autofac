@@ -90,12 +90,12 @@ namespace Shuttle.Core.Autofac
 			return this;
 		}
 
-		public override IComponentRegistry Register(Type dependencyType, object instance)
+		public override IComponentRegistry RegisterInstance(Type dependencyType, object instance)
 		{
 			Guard.AgainstNull(dependencyType, nameof(dependencyType));
 			Guard.AgainstNull(instance, nameof(instance));
 
-			base.Register(dependencyType, instance);
+			base.RegisterInstance(dependencyType, instance);
 
 			try
 			{

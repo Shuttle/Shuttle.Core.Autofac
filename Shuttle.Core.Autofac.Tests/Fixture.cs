@@ -50,6 +50,34 @@ namespace Shuttle.Core.Autofac.Tests
 		}
 
 		[Test]
+		public void Should_be_able_to_register_and_resolve_an_open_generic_singleton()
+		{
+			var containerBuilder = new ContainerBuilder();
+
+			var registry = new AutofacComponentRegistry(containerBuilder);
+
+			RegisterSingletonOpen(registry);
+
+			var resolver = new AutofacComponentResolver(containerBuilder.Build());
+
+			ResolveSingletonOpen(resolver);
+		}
+
+		[Test]
+		public void Should_be_able_to_register_and_resolve_transient_open_generic_components()
+		{
+			var containerBuilder = new ContainerBuilder();
+
+			var registry = new AutofacComponentRegistry(containerBuilder);
+
+			RegisterTransientOpen(registry);
+
+			var resolver = new AutofacComponentResolver(containerBuilder.Build());
+
+			ResolveTransientOpen(resolver);
+		}
+
+		[Test]
 		public void Should_be_able_to_register_and_resolve_a_multiple_singleton()
 		{
 			var containerBuilder = new ContainerBuilder();

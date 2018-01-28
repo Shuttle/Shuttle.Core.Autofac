@@ -52,13 +52,13 @@ namespace Shuttle.Core.Autofac
             return this;
         }
 
-        public override IComponentRegistry RegisterOpen(Type dependencyType, Type implementationType,
+        public override IComponentRegistry RegisterGeneric(Type dependencyType, Type implementationType,
             Lifestyle lifestyle)
         {
             Guard.AgainstNull(dependencyType, nameof(dependencyType));
             Guard.AgainstNull(implementationType, nameof(implementationType));
 
-            base.RegisterOpen(dependencyType, implementationType, lifestyle);
+            base.RegisterGeneric(dependencyType, implementationType, lifestyle);
 
             try
             {

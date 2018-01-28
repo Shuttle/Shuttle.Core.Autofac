@@ -56,11 +56,11 @@ namespace Shuttle.Core.Autofac.Tests
 
 			var registry = new AutofacComponentRegistry(containerBuilder);
 
-			RegisterSingletonOpen(registry);
+			RegisterSingletonGeneric(registry);
 
 			var resolver = new AutofacComponentResolver(containerBuilder.Build());
 
-			ResolveSingletonOpen(resolver);
+			ResolveSingletonGeneric(resolver);
 		}
 
 		[Test]
@@ -70,11 +70,11 @@ namespace Shuttle.Core.Autofac.Tests
 
 			var registry = new AutofacComponentRegistry(containerBuilder);
 
-			RegisterTransientOpen(registry);
+			RegisterTransientGeneric(registry);
 
 			var resolver = new AutofacComponentResolver(containerBuilder.Build());
 
-			ResolveTransientOpen(resolver);
+			ResolveTransientGeneric(resolver);
 		}
 
 		[Test]

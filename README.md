@@ -4,7 +4,7 @@
 PM> Install-Package Shuttle.Core.Autofac
 ```
 
-The implementation for Autofac makes use of both a `ComponentRegistry` that implements the `IComponentRegistry` interface as well as an 'ComponentResolver` that implements the `IComponentResolver` interface.
+The implementation for Autofac makes use of both a `ComponentRegistry` that implements the `IComponentRegistry` interface as well as an `ComponentResolver` that implements the `IComponentResolver` interface.
 
 ``` c#
 var builder = new ContainerBuilder();

@@ -16,6 +16,8 @@ namespace Shuttle.Core.Autofac
             Guard.AgainstNull(container, nameof(container));
 
             _container = container;
+
+            this.WireComponentResolverDelegate();
         }
 
         public object Resolve(Type dependencyType)

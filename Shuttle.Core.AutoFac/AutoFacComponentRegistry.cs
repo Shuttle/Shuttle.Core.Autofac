@@ -15,6 +15,9 @@ namespace Shuttle.Core.Autofac
             Guard.AgainstNull(containerBuilder, nameof(containerBuilder));
 
             _containerBuilder = containerBuilder;
+
+            this.AttemptRegisterInstance<IComponentRegistry>(this);
+            this.AttemptRegisterComponentResolverDelegate();
         }
 
         public override IComponentRegistry Register(Type dependencyType, Type implementationType, Lifestyle lifestyle)
